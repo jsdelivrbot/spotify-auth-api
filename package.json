@@ -6,11 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "noah lubko",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noah2233/spotify-auth-api.git"
+  },
+  "author": "",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.15.3",
-    "gulp": "^3.9.1",
-    "gulp-nodemon": "^2.2.1"
-  }
+  "bugs": {
+    "url": "https://github.com/noah2233/spotify-auth-api/issues"
+  },
+  "homepage": "https://github.com/noah2233/spotify-auth-api#readme"
 }
