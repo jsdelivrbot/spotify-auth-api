@@ -8,11 +8,7 @@ app.use(express.static(__dirname + '/public'));
 var router = express.Router();
 router.route('/token')
     .get(function(req, res) {
-        // 'Access-Control-Allow-Origin': '*',
-        // 'Access-Control-Allow-Credentials': true,
-        // 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, DELETE',
-        // 'Access-Control-Allow-Headers': 'Accept, Authorization, Origin, Content-Type'
-
+        //set http header
         res.header('Access-Control-Allow-Origin', '*');
         res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
         res.header('Access-Control-Allow-Headers', 'Content-Type');
