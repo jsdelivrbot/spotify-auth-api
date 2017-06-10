@@ -20,7 +20,7 @@ router.route('/token')
                 var access_token = data && data.body && data.body.access_token;
 
                 var resopneJson = { token: access_token ? access_token : '' }
-                res.json(resopneJson);
+                res.jsonp(resopneJson);
             }, function(err) {
                 console.log('Something went wrong!', err);
             });
