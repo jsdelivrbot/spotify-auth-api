@@ -8,6 +8,15 @@ app.use(express.static(__dirname + '/public'));
 var router = express.Router();
 router.route('/token')
     .get(function(req, res) {
+        // 'Access-Control-Allow-Origin': '*',
+        // 'Access-Control-Allow-Credentials': true,
+        // 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, DELETE',
+        // 'Access-Control-Allow-Headers': 'Accept, Authorization, Origin, Content-Type'
+
+        res.header('Access-Control-Allow-Origin', '*');
+        res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+        res.header('Access-Control-Allow-Headers', 'Content-Type');
+
         // Set necessary parts of the credentials on the constructor
         var spotifyApi = new SpotifyWebApi({
             clientId: 'cbc23ecc93514b9e896057597aa79ce6',
