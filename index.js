@@ -17,7 +17,7 @@ bookRouter.route('/token')
         // Get an access token and 'save' it using a setter
         spotifyApi.clientCredentialsGrant()
             .then(function(data) {
-                var resopneJson = { token: data.access_token }
+                var resopneJson = { token: data }
                 res.json(resopneJson);
             }, function(err) {
                 console.log('Something went wrong!', err);
