@@ -19,7 +19,7 @@ bookRouter.route('/token')
             .then(function(data) {
                 var access_token = data && data.body && data.body.access_token;
 
-                var resopneJson = { token: access_token ? access_toke : '' }
+                var resopneJson = { token: access_token ? access_token : '' }
                 res.json(resopneJson);
             }, function(err) {
                 console.log('Something went wrong!', err);
