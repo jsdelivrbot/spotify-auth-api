@@ -5,8 +5,8 @@ var SpotifyWebApi = require('spotify-web-api-node');
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
 
-var bookRouter = express.Router();
-bookRouter.route('/token')
+var router = express.Router();
+router.route('/token')
     .get(function(req, res) {
         // Set necessary parts of the credentials on the constructor
         var spotifyApi = new SpotifyWebApi({
@@ -26,7 +26,7 @@ bookRouter.route('/token')
             });
     });
 
-app.use('/', bookRouter);
+app.use('/', router);
 
 app.listen(app.get('port'), function() {
     console.log("Node app is running at localhost:" + app.get('port'))
